@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2019/12/07/底层硬核/mybatis解决sql注入问题/"/>
+  <link rel="canonical" href="https://anarckk.github.io/myvolantis/2019/12/07/底层硬核/mybatis解决sql注入问题/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,12 +27,12 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/myvolantis/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/myvolantis/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>mybatis解决SQL注入问题 - Anarckk's Blog</title>
   <meta name="keywords" content="mybatis,mysql,sql注入,null">
@@ -42,7 +42,7 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="mybatis解决SQL注入问题">
-<meta property="og:url" content="http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:url" content="https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Anarckk&#39;s Blog">
 <meta property="og:description" content="转载：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;loveyoulx&#x2F;p&#x2F;9526068.html 思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。 解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。 SQL 注入攻击 SQL注入攻击，简称SQL攻击或注入攻击，是">
 <meta property="og:locale" content="zh_CN">
@@ -1675,8 +1675,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="/myvolantis/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/myvolantis/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1748,9 +1748,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687313135457),
+    lastupdate: new Date(1687313602483),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2193,7 +2193,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href='/myvolantis/'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2211,11 +2211,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博文"
+                href="/myvolantis/" title="博文"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-myvolantis"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2228,11 +2228,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/myvolantis/categories/" title="分类"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-myvolantiscategories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2245,11 +2245,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
+                href="/myvolantis/tags/" title="标签"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-myvolantistags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2262,11 +2262,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
+                href="/myvolantis/archives/" title="归档"
                   
                   
                   
-                    active-action="action-archives"
+                    active-action="action-myvolantisarchives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2279,13 +2279,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
+                href="/myvolantis/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-about"
+                    active-action="action-myvolantisabout"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2317,11 +2317,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博文"
+                href="/myvolantis/" title="博文"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-myvolantis"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2334,11 +2334,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/myvolantis/categories/" title="分类"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-myvolantiscategories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2351,11 +2351,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
+                href="/myvolantis/tags/" title="标签"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-myvolantistags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2368,11 +2368,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
+                href="/myvolantis/archives/" title="归档"
                   
                   
                   
-                    active-action="action-archives"
+                    active-action="action-myvolantisarchives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2385,13 +2385,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
+                href="/myvolantis/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-about"
+                    active-action="action-myvolantisabout"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2434,40 +2434,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/"
+            <a href="/myvolantis/"
               
               
-              active-action="action-home">
+              active-action="action-myvolantis">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>博文</p>
             </a>
           
-            <a href="/categories/"
+            <a href="/myvolantis/categories/"
               
               
-              active-action="action-categories">
+              active-action="action-myvolantiscategories">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
-            <a href="/tags/"
+            <a href="/myvolantis/tags/"
               
               
-              active-action="action-tags">
+              active-action="action-myvolantistags">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>标签</p>
             </a>
           
-            <a href="/archives/"
+            <a href="/myvolantis/archives/"
               
               
-              active-action="action-archives">
+              active-action="action-myvolantisarchives">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>归档</p>
             </a>
           
-            <a href="/about/"
+            <a href="/myvolantis/about/"
               
                 rel="nofollow"
               
               
-              active-action="action-about">
+              active-action="action-myvolantisabout">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>关于</p>
             </a>
           
@@ -2488,7 +2488,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2019/12/07/底层硬核/mybatis解决SQL注入问题/">
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/07/底层硬核/mybatis解决SQL注入问题/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
   </span>
@@ -2528,10 +2528,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/">底层硬核</a>
+    <a class="category-link" href="/myvolantis/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/">底层硬核</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/" itemprop="url"><span itemprop="name">底层硬核</span></a>
+        <a href="/myvolantis/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/" itemprop="url"><span itemprop="name">底层硬核</span></a>
       </span>
     
   </div>
@@ -2606,13 +2606,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testFindUserByName</span><span class="params">()</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line"></span><br><span class="line">    SqlSession sqlSession=sqlSessionFactory.openSession();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建UserMapper代理对象</span></span><br><span class="line">    UserMapper userMapper=sqlSession.getMapper(UserMapper.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//调用userMapper的方法</span></span><br><span class="line">    List&lt;User&gt; list=userMapper.findUserByName(<span class="string">&quot;&#x27; or &#x27;1&#x27;=&#x27;1&quot;</span>);</span><br><span class="line"></span><br><span class="line">    sqlSession.close();</span><br><span class="line"></span><br><span class="line">    System.out.println(list);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果如下图所示：</p>
-<p><img src="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2.jpg" class="lazyload" data-srcset="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>可以看到执行语句其实变为了 select * from user ,将user 表中的全部记录打印出来了。发生了 SQL 注入。</p>
 <p>2、如果将配置文件中的 SQL 语句改成 #{} 形式，可避免 SQL 注入。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findUserByName&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.lang.String&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;cn.itcast.mybatis.po.User&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用 SQL concat 语句,拼接字符串,防止 SQL 注入 --&gt;</span></span><br><span class="line">    SELECT * FROM USER WHERE username LIKE CONCAT(&#x27;%&#x27;,#&#123;value&#125;,&#x27;%&#x27; )</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>再次运行测试程序，控制台输出如下：</p>
-<p><img src="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A22.jpg" class="lazyload" data-srcset="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A22.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A22.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A22.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>可以看到程序中参数部分用 ? 替代了，很好地解决了 SQL 语句的问题，防止了 SQL 注入。查询结果将为空。</p>
 <h4 id="用-？-代替就能防止-SQL-注入的原理"><a href="#用-？-代替就能防止-SQL-注入的原理" class="headerlink" title="用 ？ 代替就能防止 SQL 注入的原理"></a>用 ？ 代替就能防止 SQL 注入的原理</h4><p>参考这篇博客 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/greatfish/p/6067849.html">https://www.cnblogs.com/greatfish/p/6067849.html</a></p>
 <p>先看下面用占位符来查询的一句话</p>
@@ -2626,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setString</span><span class="params">(<span class="type">int</span> parameterIndex, String x)</span> <span class="keyword">throws</span> SQLException &#123;</span><br><span class="line">    <span class="comment">// if the passed string is null, then set this column to null</span></span><br><span class="line">    <span class="keyword">if</span> (x == <span class="literal">null</span>) &#123;</span><br><span class="line">        setNull(parameterIndex, Types.CHAR);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">buf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>((<span class="type">int</span>) (x.length() * <span class="number">1.1</span>));</span><br><span class="line">        buf.append(<span class="string">&#x27;\&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">stringLength</span> <span class="operator">=</span> x.length();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// Note: buf.append(char) is _faster_ than</span></span><br><span class="line">        <span class="comment">// appending in blocks, because the block</span></span><br><span class="line">        <span class="comment">// append requires a System.arraycopy()....</span></span><br><span class="line">        <span class="comment">// go figure...</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; stringLength; ++i) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> x.charAt(i);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">switch</span> (c) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>: <span class="comment">/* Must be escaped for &#x27;mysql&#x27; */</span></span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;\n&#x27;</span>: <span class="comment">/* Must be escaped for logs */</span></span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;n&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;\r&#x27;</span>:</span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;\\&#x27;</span>:</span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;\&#x27;&#x27;</span>:</span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;\&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;&quot;&#x27;</span>: <span class="comment">/* Better safe than sorry */</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">this</span>.usingAnsiMode) &#123;</span><br><span class="line">                    buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                buf.append(<span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;\032&#x27;</span>: <span class="comment">/* This gives problems on Win32 */</span></span><br><span class="line">                buf.append(<span class="string">&#x27;\\&#x27;</span>);</span><br><span class="line">                buf.append(<span class="string">&#x27;Z&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                buf.append(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        buf.append(<span class="string">&#x27;\&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">parameterAsString</span> <span class="operator">=</span> buf.toString();</span><br><span class="line"></span><br><span class="line">        <span class="type">byte</span>[] parameterAsBytes = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">this</span>.isLoadDataQuery) &#123;</span><br><span class="line">            parameterAsBytes = StringUtils.getBytes(parameterAsString,</span><br><span class="line">                    <span class="built_in">this</span>.charConverter, <span class="built_in">this</span>.charEncoding, <span class="built_in">this</span>.connection</span><br><span class="line">                            .getServerCharacterEncoding(), <span class="built_in">this</span>.connection</span><br><span class="line">                            .parserKnowsUnicode());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// Send with platform character encoding</span></span><br><span class="line">            parameterAsBytes = parameterAsString.getBytes();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        setInternal(parameterIndex, parameterAsBytes);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>所以转义后的sql为’zhangsan&#39; or &#39;1&#39;&#x3D;&#39;1’;这个时候是查不出来的。</p>
-<p><img src="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A23.jpg" class="lazyload" data-srcset="/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A23.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A23.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/07-sql%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E4%B8%8Emybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A23.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 
   </div>
   
@@ -2663,7 +2663,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mybatis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mysql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mysql</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/sql%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>sql注入</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/mybatis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/mysql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mysql</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/sql%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>sql注入</p></a></div>
   <span hidden itemprop="keywords">mybatis mysql sql注入</span>
 
 
@@ -2677,7 +2677,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
 思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。
 解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。
 SQL 注入攻击
@@ -2712,7 +2712,7 @@ username 和 password 字段被恶意填入
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
 思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。
 解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。
 SQL 注入攻击
@@ -2747,7 +2747,7 @@ username 和 password 字段被恶意填入
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/&title=mybatis解决SQL注入问题 - Anarckk's Blog&summary=转载：https://www.cnblogs.com/loveyoulx/p/9526068.html
 思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。
 解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。
 SQL 注入攻击
@@ -2803,7 +2803,7 @@ username 和 password 字段被恶意填入
   
     <div class="prev-next">
       
-        <a class='prev' href='/2019/12/07/2019-12/07-CentOS7-%E6%9F%A5%E7%9C%8BIP%E3%80%81Gateway%E3%80%81DNS%E3%80%81Hostname%E3%80%81%E7%BD%91%E5%85%B3/'>
+        <a class='prev' href='/myvolantis/2019/12/07/2019-12/07-CentOS7-%E6%9F%A5%E7%9C%8BIP%E3%80%81Gateway%E3%80%81DNS%E3%80%81Hostname%E3%80%81%E7%BD%91%E5%85%B3/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CentOS7 查看IP、Gateway、DNS、Hostname、网关</p>
           <p class='content'>查看IPscript1ip addr
 
@@ -2817,7 +2817,7 @@ username 和 password 字段被恶意填入
         </a>
       
       
-        <a class='next' href='/2019/12/06/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/windows%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E5%BE%AE%E8%BD%AF%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/'>
+        <a class='next' href='/myvolantis/2019/12/06/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/windows%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E5%BE%AE%E8%BD%AF%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/'>
           <p class='title'>windows内核设计微软中文文档<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>https://docs.microsoft.com/zh-cn/windows-hardware/drivers/kernel/
 
@@ -2837,7 +2837,7 @@ username 和 password 字段被恶意填入
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/index.html#comments">
+      <meta itemprop="discussionUrl" content="/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2863,7 +2863,7 @@ username 和 password 字段被恶意填入
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
+        <a class='avatar flat-box rectangle' href='/myvolantis/about/'>
           <img no-lazy src='/assets/volantis/头像2.jpg'/>
         </a>
       
@@ -2882,7 +2882,7 @@ username 和 password 字段被恶意填入
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
+            <a href="/myvolantis/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2909,7 +2909,7 @@ username 和 password 字段被恶意填入
           
         
           
-            <a href="/"
+            <a href="/myvolantis/"
               class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -3111,7 +3111,7 @@ username 和 password 字段被恶意填入
 
 <!-- internal -->
 
-<script src="/js/app.js"></script>
+<script src="/myvolantis/myvolantis/js/app.js"></script>
 
 
 
@@ -3127,19 +3127,19 @@ username 和 password 字段被恶意填入
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/tags/sites.js")
+        volantis.js("/myvolantis/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/friends.js")
+        volantis.js("/myvolantis/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/contributors.js")
+        volantis.js("/myvolantis/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3259,14 +3259,14 @@ username 和 password 字段被恶意填入
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
-    "/" || "/" :
-    "//" || "/";
+  const SearchServiceDataPathRoot = ("/myvolantis/" || "/").endsWith("/") ?
+    "/myvolantis/" || "/" :
+    "/myvolantis//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js");
+    return volantis.js("/myvolantis/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3515,7 +3515,7 @@ username 和 password 字段被恶意填入
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/底层硬核/","name":"底层硬核"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2019/12/07/底层硬核/mybatis解决SQL注入问题/","name":"mybatis解决SQL注入问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"http://example.com/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"mybatis解决SQL注入问题","description":"转载：https://www.cnblogs.com/loveyoulx/p/9526068.html\n思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。\n解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。\nSQL 注入攻击\nSQL注入攻击，简称SQL攻击或注入攻击，是发生于应用程序之数据库层的安全漏洞。简而言之，是在输入的字符串之中注入SQL指令，在设计不良的程序当中忽略了检查，那么这些注入进去的指令就会被数据库服务器误认为是正常的SQL指令而运行，因此遭到破坏或是入侵。\n\n最常见的就是我们在应用程序中使用字符串联结方式组合 SQL 指令，有心之人就会写一些特殊的符号，恶意篡改原本的 SQL 语法的作用，达到注入攻击的目的。\n举个栗子：\n比如验证用户登录需要 username 和 password，编写的 SQL 语句如下：\n1String querySql = &quot;select * from user where (name = &#x27;&quot;+ username +&quot;&#x27;) and (pw = &#x27;&quot;+ password +&quot;&#x27;);&quot;;\n\nusername 和 password 字段被恶意填入\n1username = &quot;1&#x27; OR &#x27;1&#x27;=&#x27;1&quot;;\n\n与\n1password = &quot;1&#x27; OR &#x27;1&#x27;=&#x27;1&quot;;\n\n将导致原本的 SQL 字符串被填为：\n1select * from user where (name = &#x27;1&#x27; or &#x27;1&#x27;=&#x27;1&#x27;) and (pw = &#x27;1&#x27; or &#x27;1&#x27;=&#x27;1&#x27;);\n\n实际上运行的 SQL 语句将变成：\n1select * from user;\n\n也就是不再需要 username 和 password 账密即达到登录的目的，结果不言而喻。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/","wordCount":978,"datePublished":"2019-12-07T03:48:58.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"底层硬核","keywords":"mybatis,mysql,sql注入","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/categories/底层硬核/","name":"底层硬核"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/2019/12/07/底层硬核/mybatis解决SQL注入问题/","name":"mybatis解决SQL注入问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io/myvolantis?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"mybatis解决SQL注入问题","description":"转载：https://www.cnblogs.com/loveyoulx/p/9526068.html\n思考与理解SQL注入本质上，是程序将用户输入的参数当成命令的一部分进行解析，从而使用户可以自由搜索我们的数据库中的记录。\n解决方法，是将用户输入的内容进行解析和转义，将用户输入内容中的恶意代码转为普通字符串，从而保护数据库不被攻击。\nSQL 注入攻击\nSQL注入攻击，简称SQL攻击或注入攻击，是发生于应用程序之数据库层的安全漏洞。简而言之，是在输入的字符串之中注入SQL指令，在设计不良的程序当中忽略了检查，那么这些注入进去的指令就会被数据库服务器误认为是正常的SQL指令而运行，因此遭到破坏或是入侵。\n\n最常见的就是我们在应用程序中使用字符串联结方式组合 SQL 指令，有心之人就会写一些特殊的符号，恶意篡改原本的 SQL 语法的作用，达到注入攻击的目的。\n举个栗子：\n比如验证用户登录需要 username 和 password，编写的 SQL 语句如下：\n1String querySql = &quot;select * from user where (name = &#x27;&quot;+ username +&quot;&#x27;) and (pw = &#x27;&quot;+ password +&quot;&#x27;);&quot;;\n\nusername 和 password 字段被恶意填入\n1username = &quot;1&#x27; OR &#x27;1&#x27;=&#x27;1&quot;;\n\n与\n1password = &quot;1&#x27; OR &#x27;1&#x27;=&#x27;1&quot;;\n\n将导致原本的 SQL 字符串被填为：\n1select * from user where (name = &#x27;1&#x27; or &#x27;1&#x27;=&#x27;1&#x27;) and (pw = &#x27;1&#x27; or &#x27;1&#x27;=&#x27;1&#x27;);\n\n实际上运行的 SQL 语句将变成：\n1select * from user;\n\n也就是不再需要 username 和 password 账密即达到登录的目的，结果不言而喻。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/myvolantis/2019/12/07/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/mybatis%E8%A7%A3%E5%86%B3SQL%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98/","wordCount":978,"datePublished":"2019-12-07T03:48:58.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"底层硬核","keywords":"mybatis,mysql,sql注入","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

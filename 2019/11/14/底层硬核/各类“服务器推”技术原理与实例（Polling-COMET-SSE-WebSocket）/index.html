@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（polling-comet-sse-websocket）/"/>
+  <link rel="canonical" href="https://anarckk.github.io/myvolantis/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（polling-comet-sse-websocket）/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,12 +27,12 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/myvolantis/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/myvolantis/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog</title>
   <meta name="keywords" content="JAVA后端,null">
@@ -43,7 +43,7 @@ COMET 包含两种: 基于HTT... - Anarckk - Anarckk's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）">
-<meta property="og:url" content="http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/index.html">
+<meta property="og:url" content="https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/index.html">
 <meta property="og:site_name" content="Anarckk&#39;s Blog">
 <meta property="og:description" content="各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket） 简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket 轮询简单易实现，问题是连接数量多会挤爆服务器 COMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式">
 <meta property="og:locale" content="zh_CN">
@@ -1674,8 +1674,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="/myvolantis/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/myvolantis/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1747,9 +1747,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687313135457),
+    lastupdate: new Date(1687313602483),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2192,7 +2192,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href='/myvolantis/'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2210,11 +2210,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博文"
+                href="/myvolantis/" title="博文"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-myvolantis"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2227,11 +2227,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/myvolantis/categories/" title="分类"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-myvolantiscategories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2244,11 +2244,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
+                href="/myvolantis/tags/" title="标签"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-myvolantistags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2261,11 +2261,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
+                href="/myvolantis/archives/" title="归档"
                   
                   
                   
-                    active-action="action-archives"
+                    active-action="action-myvolantisarchives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2278,13 +2278,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
+                href="/myvolantis/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-about"
+                    active-action="action-myvolantisabout"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2316,11 +2316,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博文"
+                href="/myvolantis/" title="博文"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-myvolantis"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2333,11 +2333,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/myvolantis/categories/" title="分类"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-myvolantiscategories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2350,11 +2350,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
+                href="/myvolantis/tags/" title="标签"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-myvolantistags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2367,11 +2367,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
+                href="/myvolantis/archives/" title="归档"
                   
                   
                   
-                    active-action="action-archives"
+                    active-action="action-myvolantisarchives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2384,13 +2384,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
+                href="/myvolantis/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-about"
+                    active-action="action-myvolantisabout"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2433,40 +2433,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/"
+            <a href="/myvolantis/"
               
               
-              active-action="action-home">
+              active-action="action-myvolantis">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>博文</p>
             </a>
           
-            <a href="/categories/"
+            <a href="/myvolantis/categories/"
               
               
-              active-action="action-categories">
+              active-action="action-myvolantiscategories">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
-            <a href="/tags/"
+            <a href="/myvolantis/tags/"
               
               
-              active-action="action-tags">
+              active-action="action-myvolantistags">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>标签</p>
             </a>
           
-            <a href="/archives/"
+            <a href="/myvolantis/archives/"
               
               
-              active-action="action-archives">
+              active-action="action-myvolantisarchives">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>归档</p>
             </a>
           
-            <a href="/about/"
+            <a href="/myvolantis/about/"
               
                 rel="nofollow"
               
               
-              active-action="action-about">
+              active-action="action-myvolantisabout">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>关于</p>
             </a>
           
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（Polling-COMET-SSE-WebSocket）/">
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（Polling-COMET-SSE-WebSocket）/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
   </span>
@@ -2527,10 +2527,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/">底层硬核</a>
+    <a class="category-link" href="/myvolantis/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/">底层硬核</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/" itemprop="url"><span itemprop="name">底层硬核</span></a>
+        <a href="/myvolantis/categories/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/" itemprop="url"><span itemprop="name">底层硬核</span></a>
       </span>
     
   </div>
@@ -2607,7 +2607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JAVA%E5%90%8E%E7%AB%AF/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA后端</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/JAVA%E5%90%8E%E7%AB%AF/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA后端</p></a></div>
   <span hidden itemprop="keywords">JAVA后端</span>
 
 
@@ -2621,7 +2621,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
 简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket
 轮询简单易实现，问题是连接数量多会挤爆服务器
 COMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式
@@ -2638,7 +2638,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
 简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket
 轮询简单易实现，问题是连接数量多会挤爆服务器
 COMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式
@@ -2655,7 +2655,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/&title=各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket） - Anarckk's Blog&summary=各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）
 简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket
 轮询简单易实现，问题是连接数量多会挤爆服务器
 COMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式
@@ -2693,13 +2693,13 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
   
     <div class="prev-next">
       
-        <a class='prev' href='/2019/11/14/2019-11/14-mybatis_%E9%80%9A%E7%94%A8%E6%80%A7%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E5%A2%9E%E6%94%B9%E6%9F%A5/'>
+        <a class='prev' href='/myvolantis/2019/11/14/2019-11/14-mybatis_%E9%80%9A%E7%94%A8%E6%80%A7%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E5%A2%9E%E6%94%B9%E6%9F%A5/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>mybatis_通用性比较好的增改查</p>
           <p class='content'>通用性比较好的增改查123456789101112131415161718192021222324252627282930313233343536373839404142434445464748...</p>
         </a>
       
       
-        <a class='next' href='/2019/11/14/2019-11/14-SpringBoot%E5%B7%A5%E7%A8%8B%E4%B8%AD%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%80%BB%E7%BB%93/'>
+        <a class='next' href='/myvolantis/2019/11/14/2019-11/14-SpringBoot%E5%B7%A5%E7%A8%8B%E4%B8%AD%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%80%BB%E7%BB%93/'>
           <p class='title'>SpringBoot工程中过滤器设置总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>思路在 springboot 里注册过滤器有两种思路，一种是在 configuration 里提供 FilterRegistrationBean 的 bean.
 第二种是使用 @WebFilte...</p>
@@ -2718,7 +2718,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/index.html#comments">
+      <meta itemprop="discussionUrl" content="/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2744,7 +2744,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
+        <a class='avatar flat-box rectangle' href='/myvolantis/about/'>
           <img no-lazy src='/assets/volantis/头像2.jpg'/>
         </a>
       
@@ -2763,7 +2763,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
+            <a href="/myvolantis/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2790,7 +2790,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
           
         
           
-            <a href="/"
+            <a href="/myvolantis/"
               class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2992,7 +2992,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
 
 <!-- internal -->
 
-<script src="/js/app.js"></script>
+<script src="/myvolantis/myvolantis/js/app.js"></script>
 
 
 
@@ -3008,19 +3008,19 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/tags/sites.js")
+        volantis.js("/myvolantis/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/friends.js")
+        volantis.js("/myvolantis/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/contributors.js")
+        volantis.js("/myvolantis/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3140,14 +3140,14 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
-    "/" || "/" :
-    "//" || "/";
+  const SearchServiceDataPathRoot = ("/myvolantis/" || "/").endsWith("/") ?
+    "/myvolantis/" || "/" :
+    "/myvolantis//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js");
+    return volantis.js("/myvolantis/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3396,7 +3396,7 @@ WebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于�
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/底层硬核/","name":"底层硬核"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（Polling-COMET-SSE-WebSocket）/","name":"各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"http://example.com/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket）","description":"各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）\n简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket\n轮询简单易实现，问题是连接数量多会挤爆服务器\nCOMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式\nSSE (Server-Sent Events) 是HTML5标准中的一部分。其实现原理类似于我们在上一节中提到的基于iframe的长连接模式。HTTP响应内容有一种特殊的content-type —— text&#x2F;event-stream，该响应头标识了响应内容为事件流，客户端不会关闭连接，而是等待服务端不断得发送响应结果。SSE规范比较简单，主要分为两个部分：浏览器中的EventSource对象，以及服务器端与浏览器端之间的通讯协议。\nWebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于“服务器推”了，它是一个全双工的协议，适用于需要进行复杂双向数据通讯的场景。因此也有着更复杂的规范。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/","wordCount":520,"datePublished":"2019-11-14T14:59:27.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"底层硬核","keywords":"JAVA后端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/categories/底层硬核/","name":"底层硬核"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/2019/11/14/底层硬核/各类“服务器推”技术原理与实例（Polling-COMET-SSE-WebSocket）/","name":"各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io/myvolantis?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"各类“服务器推”技术原理与实例（Polling/COMET/SSE/WebSocket）","description":"各类“服务器推”技术原理与实例（Polling&#x2F;COMET&#x2F;SSE&#x2F;WebSocket）\n简单来讲主要是4中方法： 轮询、COMET、SSE (Server-Sent Events)、WebSocket\n轮询简单易实现，问题是连接数量多会挤爆服务器\nCOMET 包含两种: 基于HTTP的长轮询（long-polling）、基于iframe的长连接流（stream）模式\nSSE (Server-Sent Events) 是HTML5标准中的一部分。其实现原理类似于我们在上一节中提到的基于iframe的长连接模式。HTTP响应内容有一种特殊的content-type —— text&#x2F;event-stream，该响应头标识了响应内容为事件流，客户端不会关闭连接，而是等待服务端不断得发送响应结果。SSE规范比较简单，主要分为两个部分：浏览器中的EventSource对象，以及服务器端与浏览器端之间的通讯协议。\nWebSocket与http协议一样都是基于TCP的。WebSocket其实不仅仅限于“服务器推”了，它是一个全双工的协议，适用于需要进行复杂双向数据通讯的场景。因此也有着更复杂的规范。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/myvolantis/2019/11/14/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B%EF%BC%88Polling-COMET-SSE-WebSocket%EF%BC%89/","wordCount":520,"datePublished":"2019-11-14T14:59:27.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"底层硬核","keywords":"JAVA后端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
