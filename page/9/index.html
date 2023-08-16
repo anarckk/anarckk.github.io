@@ -1743,7 +1743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692078797249),
+    lastupdate: new Date(1692193621026),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2488,6 +2488,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/01/2019-12/01-vsftp上传文件权限问题/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Anarckk's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Anarckk's Blog">
+    <meta itemprop="description" content="Anarckk's Blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/myvolantis/2019/12/01/2019-12/01-vsftp%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"  itemprop="url">
+        vsftp上传文件权限问题
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <p>file_open_mode上传档案的权限，与chmod 所使用的数值相同。如果希望上传的文件可以执行，设此值为0777。</p>
+<p>local_umask&#x3D;022         这是指定本地用户上传后的文件权限设置</p>
+<p>umask是unix操作系统的概念，umask决定目录和文件被创建时得到的初始权限<br>umask &#x3D; 022 时，新建的目录 权限是755，文件的权限是 644<br>umask &#x3D; 077 时，新建的目录 权限是700，文件的权限时 600<br>vsftpd的local_umask和anon_umask借鉴了它<br>默认情况下vsftp上传之后文件的权限是600，目录权限是700<br>想要修改上传之后文件的权限，有两种情况<br>如果使用vsftp的是本地用户<br>则要修改配置文件中的 local_umask 的值<br>如果使用vsftp的是虚拟用户<br>则要修改配置文件中的 anon_umask 的值</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="请设置文章作者">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2019-12-01T20:10:21+08:00">2019-12-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/myvolantis/2019/12/01/2019-12/01-vsftp%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/01/2019-12/01-linux下mv以及cp命令/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
@@ -3120,76 +3191,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/myvolantis/2019/11/30/2019-11/30-Markdown%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/11/30/2019-11/30-长期建站和-windows-远程桌面慎用阿里云突发性能-t5-实例/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Anarckk's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Anarckk's Blog">
-    <meta itemprop="description" content="Anarckk's Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/myvolantis/2019/11/30/2019-11/30-%E9%95%BF%E6%9C%9F%E5%BB%BA%E7%AB%99%E5%92%8C-windows-%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%85%8E%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%AA%81%E5%8F%91%E6%80%A7%E8%83%BD-t5-%E5%AE%9E%E4%BE%8B/"  itemprop="url">
-        长期建站和 windows 远程桌面慎用阿里云突发性能 t5 实例
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>本文来自转载：<a target="_blank" rel="noopener" href="https://www.vpsss.net/7812.html">查看来源</a></p>
-<p>阿里云全民云计算目前包括入门级配置（突发性能 t5 实例）和性能均衡配置（共享型 n4 实例和计算网络增强型实例），其中入门级的最低配置和性能均衡的最低配置价格相差 100 元左右，对于云服务器来说这个差距是很大的，代表着性能方面也有这么大的差距。经过魏艾斯博客自己的试用和网友的实际使用体验，如果你打算长期建站或做项目老魏并不推荐大家购买使用阿里云全民云计算的入门级配置。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="请设置文章作者">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2019-11-30T11:54:47+08:00">2019-11-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/myvolantis/categories/%E6%94%B6%E8%97%8F/">收藏</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/myvolantis/categories/%E6%94%B6%E8%97%8F/" itemprop="url"><span itemprop="name">收藏</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/myvolantis/2019/11/30/2019-11/30-%E9%95%BF%E6%9C%9F%E5%BB%BA%E7%AB%99%E5%92%8C-windows-%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%85%8E%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%AA%81%E5%8F%91%E6%80%A7%E8%83%BD-t5-%E5%AE%9E%E4%BE%8B/' itemprop="url">
             阅读全文
           </a>
         </div>

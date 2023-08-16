@@ -1743,7 +1743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692078797249),
+    lastupdate: new Date(1692193621026),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2488,6 +2488,80 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/04/2019-12/04-springboot集成mybatis-plus/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Anarckk's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Anarckk's Blog">
+    <meta itemprop="description" content="Anarckk's Blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/myvolantis/2019/12/04/2019-12/04-springboot%E9%9B%86%E6%88%90mybatis-plus/"  itemprop="url">
+        springboot集成mybatis-plus
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <p>从原理出发，很多问题都很好解决。注意这3个文件的配置，一般都能配好</p>
+<p>Application.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MapperScan(&quot;com.ifkal.demo.**.mapper&quot;)</span> <span class="comment">// 要配置的是mapper interface所在的包</span></span><br></pre></td></tr></table></figure>
+
+<p>application.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">type-aliases-package:</span> <span class="string">com.ifkal.demo.**.entity</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:com/ifkal/demo/**/mapper/xml/*.xml</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="请设置文章作者">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2019-12-04T13:55:56+08:00">2019-12-04</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/myvolantis/2019/12/04/2019-12/04-springboot%E9%9B%86%E6%88%90mybatis-plus/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/04/2019-12/04-docker安装frpc并对nginx容器进行代理/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
@@ -3143,77 +3217,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/myvolantis/2019/12/02/2019-12/02-%E8%A7%A3%E5%86%B3Idea%E7%9A%84SSH%E5%B7%A5%E5%85%B7%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/01/2019-12/01-vsftp上传文件权限问题/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Anarckk's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Anarckk's Blog">
-    <meta itemprop="description" content="Anarckk's Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/myvolantis/2019/12/01/2019-12/01-vsftp%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"  itemprop="url">
-        vsftp上传文件权限问题
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>file_open_mode上传档案的权限，与chmod 所使用的数值相同。如果希望上传的文件可以执行，设此值为0777。</p>
-<p>local_umask&#x3D;022         这是指定本地用户上传后的文件权限设置</p>
-<p>umask是unix操作系统的概念，umask决定目录和文件被创建时得到的初始权限<br>umask &#x3D; 022 时，新建的目录 权限是755，文件的权限是 644<br>umask &#x3D; 077 时，新建的目录 权限是700，文件的权限时 600<br>vsftpd的local_umask和anon_umask借鉴了它<br>默认情况下vsftp上传之后文件的权限是600，目录权限是700<br>想要修改上传之后文件的权限，有两种情况<br>如果使用vsftp的是本地用户<br>则要修改配置文件中的 local_umask 的值<br>如果使用vsftp的是虚拟用户<br>则要修改配置文件中的 anon_umask 的值</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="请设置文章作者">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2019-12-01T20:10:21+08:00">2019-12-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/myvolantis/2019/12/01/2019-12/01-vsftp%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/' itemprop="url">
             阅读全文
           </a>
         </div>
