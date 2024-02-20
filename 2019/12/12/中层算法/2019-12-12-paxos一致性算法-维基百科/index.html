@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://anarckk.github.io/myvolantis/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/"/>
+  <link rel="canonical" href="https://anarckk.github.io/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,12 +27,12 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="/myvolantis/css/style.css" as="style">
+  <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/myvolantis/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>paxos一致性算法-维基百科 - Anarckk's Blog</title>
   <meta name="keywords" content="paxos,null">
@@ -40,13 +40,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="paxos一致性算法-维基百科">
-<meta property="og:url" content="https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/index.html">
+<meta property="og:url" content="https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/index.html">
 <meta property="og:site_name" content="Anarckk&#39;s Blog">
 <meta property="og:description" content="https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;zh-cn&#x2F;Paxos%E7%AE%97%E6%B3%95">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2019-12-12T05:55:12.000Z">
-<meta property="article:modified_time" content="2023-06-19T08:37:14.691Z">
+<meta property="article:modified_time" content="2023-06-19T08:37:14.000Z">
 <meta property="article:author" content="Anarckk">
 <meta property="article:tag" content="paxos">
 <meta name="twitter:card" content="summary">
@@ -1671,8 +1671,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/myvolantis/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/myvolantis/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1744,9 +1744,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692952831569),
+    lastupdate: new Date(1708415149616),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2189,7 +2189,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/myvolantis/'>
+        <a class="title flat-box" target="_self" href='/'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2207,11 +2207,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2224,11 +2224,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2241,11 +2241,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2258,11 +2258,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2275,13 +2275,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2313,11 +2313,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2330,11 +2330,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2347,11 +2347,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2364,11 +2364,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2381,13 +2381,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2415,7 +2415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="half" class='cover-wrapper post dock' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/myvolantis/assets/volantis/bg-parking.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="/assets/volantis/bg-parking.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2430,40 +2430,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               
               
-              active-action="action-myvolantis">
+              active-action="action-home">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>博文</p>
             </a>
           
-            <a href="/myvolantis/categories/"
+            <a href="/categories/"
               
               
-              active-action="action-myvolantiscategories">
+              active-action="action-categories">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
-            <a href="/myvolantis/tags/"
+            <a href="/tags/"
               
               
-              active-action="action-myvolantistags">
+              active-action="action-tags">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>标签</p>
             </a>
           
-            <a href="/myvolantis/archives/"
+            <a href="/archives/"
               
               
-              active-action="action-myvolantisarchives">
+              active-action="action-archives">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>归档</p>
             </a>
           
-            <a href="/myvolantis/about/"
+            <a href="/about/"
               
                 rel="nofollow"
               
               
-              active-action="action-myvolantisabout">
+              active-action="action-about">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>关于</p>
             </a>
           
@@ -2484,7 +2484,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/">
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
   </span>
@@ -2524,10 +2524,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/myvolantis/categories/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/">中层算法</a>
+    <a class="category-link" href="/categories/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/">中层算法</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/myvolantis/categories/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">中层算法</span></a>
+        <a href="/categories/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">中层算法</span></a>
       </span>
     
   </div>
@@ -2600,7 +2600,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/paxos/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>paxos</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/paxos/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>paxos</p></a></div>
   <span hidden itemprop="keywords">paxos</span>
 
 
@@ -2614,7 +2614,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
           
           >
           
@@ -2626,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
           
           >
           
@@ -2638,7 +2638,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/&title=paxos一致性算法-维基百科 - Anarckk's Blog&summary="
           
           >
           
@@ -2671,7 +2671,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/myvolantis/2019/12/15/2019-12/15-sql%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%B0%B1%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%AD%98%E5%BA%93%E5%88%99%E5%BB%BA%E5%BA%93/'>
+        <a class='prev' href='/2019/12/15/2019-12/15-sql%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%B0%B1%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%AD%98%E5%BA%93%E5%88%99%E5%BB%BA%E5%BA%93/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>sql如果不存在就建表和如果不存库则建库</p>
           <p class='content'>如果库不存在就建库1Create Database If Not Exists elegant_cloud Character Set UTF8;
 
@@ -2679,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/myvolantis/2019/12/11/2019-12/11-%E5%85%B3%E4%BA%8E-%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%9C%A8springboot%E4%B8%AD%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/'>
+        <a class='next' href='/2019/12/11/2019-12/11-%E5%85%B3%E4%BA%8E-%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%9C%A8springboot%E4%B8%AD%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/'>
           <p class='title'>关于${}占位符在springboot中失效的问题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>原因分析在使用maven-resources-plugin插件时，发现${}做资源替换不生效。怎么设置都不生效。我的设置已经和文档上的一样了还是不生效。
 今天终于在一篇博客的启发下，把${}改成...</p>
@@ -2698,7 +2698,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2724,8 +2724,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/myvolantis/about/'>
-          <img no-lazy src='/myvolantis/assets/volantis/头像2.jpg'/>
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/assets/volantis/头像2.jpg'/>
         </a>
       
     
@@ -2743,7 +2743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/myvolantis/atom.xml"
+            <a href="/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2770,7 +2770,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2962,7 +2962,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/myvolantis/myvolantis/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -2978,19 +2978,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/sites.js")
+        volantis.js("/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/friends.js")
+        volantis.js("/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/contributors.js")
+        volantis.js("/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3110,14 +3110,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/myvolantis/" || "/").endsWith("/") ?
-    "/myvolantis/" || "/" :
-    "/myvolantis//" || "/";
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/myvolantis/js/search/hexo.js");
+    return volantis.js("/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3366,7 +3366,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/categories/中层算法/","name":"中层算法"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/","name":"paxos一致性算法-维基百科"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io/myvolantis?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"paxos一致性算法-维基百科","description":"Anarckk's Blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/myvolantis/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/","wordCount":0,"datePublished":"2019-12-12T05:55:12.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"中层算法","keywords":"paxos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/categories/中层算法/","name":"中层算法"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/2019/12/12/中层算法/2019-12-12-paxos一致性算法-维基百科/","name":"paxos一致性算法-维基百科"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"paxos一致性算法-维基百科","description":"Anarckk's Blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/2019/12/12/%E4%B8%AD%E5%B1%82%E7%AE%97%E6%B3%95/2019-12-12-paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95-%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/","wordCount":0,"datePublished":"2019-12-12T05:55:12.000Z","dateModified":"2023-06-19T08:37:14.000Z","articleSection":"中层算法","keywords":"paxos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

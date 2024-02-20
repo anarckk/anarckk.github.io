@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx之location的匹配规则/"/>
+  <link rel="canonical" href="https://anarckk.github.io/2019/11/28/2019-11/28-nginx之location的匹配规则/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,12 +27,12 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="/myvolantis/css/style.css" as="style">
+  <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/myvolantis/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>nginx之location的匹配规则 - Anarckk's Blog</title>
   <meta name="keywords" content="nginx,null">
@@ -58,13 +58,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx之location的匹配规则">
-<meta property="og:url" content="https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/index.html">
+<meta property="og:url" content="https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/index.html">
 <meta property="og:site_name" content="Anarckk&#39;s Blog">
 <meta property="og:description" content="来源 一、语法规则1location [&#x3D;|~|~*|^~] &#x2F;uri&#x2F; &amp;#123; … &amp;#125;   table th:first-of-type { width: 100px; }      符号 含义    &#x3D; 开头表示精确匹配   ^~ 开头表示 uri 以某个常规字符串开头，理解为匹配 url 路径即可。nginx 不对 url 做编码，因此请求为&#x2F;static">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2019-11-28T06:45:22.000Z">
-<meta property="article:modified_time" content="2023-06-19T08:37:14.691Z">
+<meta property="article:modified_time" content="2023-06-19T08:37:14.000Z">
 <meta property="article:author" content="Anarckk">
 <meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary">
@@ -1689,8 +1689,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/myvolantis/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/myvolantis/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1762,9 +1762,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692952831569),
+    lastupdate: new Date(1708415149616),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2207,7 +2207,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/myvolantis/'>
+        <a class="title flat-box" target="_self" href='/'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2225,11 +2225,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2242,11 +2242,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2259,11 +2259,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2276,11 +2276,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2293,13 +2293,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2331,11 +2331,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2348,11 +2348,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2365,11 +2365,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2382,11 +2382,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2399,13 +2399,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2433,7 +2433,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="half" class='cover-wrapper post dock' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/myvolantis/assets/volantis/bg-parking.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="/assets/volantis/bg-parking.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2448,40 +2448,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               
               
-              active-action="action-myvolantis">
+              active-action="action-home">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>博文</p>
             </a>
           
-            <a href="/myvolantis/categories/"
+            <a href="/categories/"
               
               
-              active-action="action-myvolantiscategories">
+              active-action="action-categories">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
-            <a href="/myvolantis/tags/"
+            <a href="/tags/"
               
               
-              active-action="action-myvolantistags">
+              active-action="action-tags">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>标签</p>
             </a>
           
-            <a href="/myvolantis/archives/"
+            <a href="/archives/"
               
               
-              active-action="action-myvolantisarchives">
+              active-action="action-archives">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>归档</p>
             </a>
           
-            <a href="/myvolantis/about/"
+            <a href="/about/"
               
                 rel="nofollow"
               
               
-              active-action="action-myvolantisabout">
+              active-action="action-about">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>关于</p>
             </a>
           
@@ -2502,7 +2502,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx之location的匹配规则/">
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/2019/11/28/2019-11/28-nginx之location的匹配规则/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
   </span>
@@ -2542,10 +2542,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
+    <a class="category-link" href="/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
+        <a href="/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
       </span>
     
   </div>
@@ -2655,7 +2655,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/nginx/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>nginx</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nginx/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>nginx</p></a></div>
   <span hidden itemprop="keywords">nginx</span>
 
 
@@ -2669,7 +2669,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
 一、语法规则1location [=|~|~*|^~] /uri/ &#123; … &#125;
 
  table th:first-of-type { width: 100px; } 
@@ -2714,7 +2714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
 一、语法规则1location [=|~|~*|^~] /uri/ &#123; … &#125;
 
  table th:first-of-type { width: 100px; } 
@@ -2759,7 +2759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/&title=nginx之location的匹配规则 - Anarckk's Blog&summary=来源
 一、语法规则1location [=|~|~*|^~] /uri/ &#123; … &#125;
 
  table th:first-of-type { width: 100px; } 
@@ -2825,13 +2825,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/myvolantis/2019/11/28/2019-11/28-%E5%85%B3%E4%BA%8EBeanUtils-copyProperties%E7%9A%84%E8%BE%A8%E6%9E%90/'>
+        <a class='prev' href='/2019/11/28/2019-11/28-%E5%85%B3%E4%BA%8EBeanUtils-copyProperties%E7%9A%84%E8%BE%A8%E6%9E%90/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>关于BeanUtils.copyProperties的辨析</p>
           <p class='content'>同事使用一个Util进行bean的拷贝,他用的时候是左边拷到右边，我用的时候是右边拷到左边，我TM才发现，原来是同名的BeanUtils，一个是springframework的，一个是apach...</p>
         </a>
       
       
-        <a class='next' href='/myvolantis/2019/11/28/2019-11/28-hexo-Front-matter/'>
+        <a class='next' href='/2019/11/28/2019-11/28-hexo-Front-matter/'>
           <p class='title'>hexo Front-matter<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量以下是预先定义的参数。
 
@@ -2867,7 +2867,7 @@ title
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2893,8 +2893,8 @@ title
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/myvolantis/about/'>
-          <img no-lazy src='/myvolantis/assets/volantis/头像2.jpg'/>
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/assets/volantis/头像2.jpg'/>
         </a>
       
     
@@ -2912,7 +2912,7 @@ title
       <div class="social-wrapper">
         
           
-            <a href="/myvolantis/atom.xml"
+            <a href="/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2939,7 +2939,7 @@ title
           
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -3141,7 +3141,7 @@ title
 
 <!-- internal -->
 
-<script src="/myvolantis/myvolantis/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -3157,19 +3157,19 @@ title
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/sites.js")
+        volantis.js("/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/friends.js")
+        volantis.js("/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/contributors.js")
+        volantis.js("/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3289,14 +3289,14 @@ title
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/myvolantis/" || "/").endsWith("/") ?
-    "/myvolantis/" || "/" :
-    "/myvolantis//" || "/";
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/myvolantis/js/search/hexo.js");
+    return volantis.js("/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3545,7 +3545,7 @@ title
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/categories/上层技术/","name":"上层技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/2019/11/28/2019-11/28-nginx之location的匹配规则/","name":"nginx之location的匹配规则"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io/myvolantis?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"nginx之location的匹配规则","description":"来源\n一、语法规则1location [=|~|~*|^~] /uri/ &#123; … &#125;\n\n table th:first-of-type { width: 100px; } \n\n\n\n\n符号\n含义\n\n\n\n&#x3D;\n开头表示精确匹配\n\n\n^~\n开头表示 uri 以某个常规字符串开头，理解为匹配 url 路径即可。nginx 不对 url 做编码，因此请求为&#x2F;static&#x2F;20%&#x2F;aa，可以被规则^~ &#x2F;static&#x2F; &#x2F;aa匹配到（注意是空格）\n\n\n~\n开头表示区分大小写的正则匹配\n\n\n~*\n开头表示不区分大小写的正则匹配\n\n\n&#x2F;\n通用匹配，任何请求都会匹配到\n\n\n多个 location 配置的情况下匹配顺序为首先匹配 &#x3D;其次匹配 ^~其次是按文件中顺序的正则匹配最后是交给 &#x2F; 通用匹配当有匹配成功时候，停止匹配，按当前匹配规则处理请求","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/myvolantis/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/","wordCount":427,"datePublished":"2019-11-28T06:45:22.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"上层技术","keywords":"nginx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/categories/上层技术/","name":"上层技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/2019/11/28/2019-11/28-nginx之location的匹配规则/","name":"nginx之location的匹配规则"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"nginx之location的匹配规则","description":"来源\n一、语法规则1location [=|~|~*|^~] /uri/ &#123; … &#125;\n\n table th:first-of-type { width: 100px; } \n\n\n\n\n符号\n含义\n\n\n\n&#x3D;\n开头表示精确匹配\n\n\n^~\n开头表示 uri 以某个常规字符串开头，理解为匹配 url 路径即可。nginx 不对 url 做编码，因此请求为&#x2F;static&#x2F;20%&#x2F;aa，可以被规则^~ &#x2F;static&#x2F; &#x2F;aa匹配到（注意是空格）\n\n\n~\n开头表示区分大小写的正则匹配\n\n\n~*\n开头表示不区分大小写的正则匹配\n\n\n&#x2F;\n通用匹配，任何请求都会匹配到\n\n\n多个 location 配置的情况下匹配顺序为首先匹配 &#x3D;其次匹配 ^~其次是按文件中顺序的正则匹配最后是交给 &#x2F; 通用匹配当有匹配成功时候，停止匹配，按当前匹配规则处理请求","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/2019/11/28/2019-11/28-nginx%E4%B9%8Blocation%E7%9A%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/","wordCount":427,"datePublished":"2019-11-28T06:45:22.000Z","dateModified":"2023-06-19T08:37:14.000Z","articleSection":"上层技术","keywords":"nginx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

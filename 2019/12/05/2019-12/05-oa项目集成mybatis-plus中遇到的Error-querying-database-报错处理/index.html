@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的error-querying-database-报错处理/"/>
+  <link rel="canonical" href="https://anarckk.github.io/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的error-querying-database-报错处理/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,12 +27,12 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-  <link rel="preload" href="/myvolantis/css/style.css" as="style">
+  <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/myvolantis/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="Anarckk's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog</title>
   <meta name="keywords" content="mybatis,mybatis-plus,pagehelper,null">
@@ -41,13 +41,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理">
-<meta property="og:url" content="https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/index.html">
+<meta property="og:url" content="https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="Anarckk&#39;s Blog">
 <meta property="og:description" content="一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包 1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2019-12-05T08:35:51.000Z">
-<meta property="article:modified_time" content="2023-06-19T08:37:14.691Z">
+<meta property="article:modified_time" content="2023-06-19T08:37:14.000Z">
 <meta property="article:author" content="Anarckk">
 <meta property="article:tag" content="mybatis">
 <meta property="article:tag" content="mybatis-plus">
@@ -1674,8 +1674,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/myvolantis/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/myvolantis/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1747,9 +1747,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/myvolantis/js/app.js","parallax":"/myvolantis/js/plugins/parallax.js","rightMenu":"/myvolantis/js/plugins/rightMenu.js","rightMenus":"/myvolantis/js/plugins/rightMenus.js","sites":"/myvolantis/js/plugins/tags/sites.js","friends":"/myvolantis/js/plugins/tags/friends.js","contributors":"/myvolantis/js/plugins/tags/contributors.js","search":"/myvolantis/js/search/hexo.js"},"css":{"style":"/myvolantis/css/style.css"}},
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692952831569),
+    lastupdate: new Date(1708415149616),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2192,7 +2192,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/myvolantis/'>
+        <a class="title flat-box" target="_self" href='/'>
           
             <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
@@ -2210,11 +2210,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2227,11 +2227,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2244,11 +2244,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2261,11 +2261,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2278,13 +2278,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2316,11 +2316,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/" title="博文"
+                href="/" title="博文"
                   
                   
                   
-                    active-action="action-myvolantis"
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-rss fa-fw'></i>博文
                 </a>
@@ -2333,11 +2333,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-myvolantiscategories"
+                    active-action="action-categories"
                   >
                   <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2350,11 +2350,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-myvolantistags"
+                    active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
@@ -2367,11 +2367,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-myvolantisarchives"
+                    active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
@@ -2384,13 +2384,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/myvolantis/about/" title="关于"
+                href="/about/" title="关于"
                   
                     rel="nofollow"
                   
                   
                   
-                    active-action="action-myvolantisabout"
+                    active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2418,7 +2418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="half" class='cover-wrapper post dock' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/myvolantis/assets/volantis/bg-parking.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="/assets/volantis/bg-parking.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2433,40 +2433,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               
               
-              active-action="action-myvolantis">
+              active-action="action-home">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>博文</p>
             </a>
           
-            <a href="/myvolantis/categories/"
+            <a href="/categories/"
               
               
-              active-action="action-myvolantiscategories">
+              active-action="action-categories">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
-            <a href="/myvolantis/tags/"
+            <a href="/tags/"
               
               
-              active-action="action-myvolantistags">
+              active-action="action-tags">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>标签</p>
             </a>
           
-            <a href="/myvolantis/archives/"
+            <a href="/archives/"
               
               
-              active-action="action-myvolantisarchives">
+              active-action="action-archives">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>归档</p>
             </a>
           
-            <a href="/myvolantis/about/"
+            <a href="/about/"
               
                 rel="nofollow"
               
               
-              active-action="action-myvolantisabout">
+              active-action="action-about">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>关于</p>
             </a>
           
@@ -2487,7 +2487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的Error-querying-database-报错处理/">
+  <link itemprop="mainEntityOfPage" href="https://anarckk.github.io/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的Error-querying-database-报错处理/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Anarckk's Blog">
   </span>
@@ -2527,10 +2527,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
+    <a class="category-link" href="/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/">上层技术</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/myvolantis/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
+        <a href="/categories/%E4%B8%8A%E5%B1%82%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">上层技术</span></a>
       </span>
     
   </div>
@@ -2576,17 +2576,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="完整的报错信息"><a href="#完整的报错信息" class="headerlink" title="完整的报错信息"></a>完整的报错信息</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: </span><br><span class="line">### Error querying database.  Cause: java.lang.NullPointerException</span><br><span class="line">### Cause: java.lang.NullPointerException</span><br><span class="line">	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:78)</span><br><span class="line">	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)</span><br><span class="line">	at com.sun.proxy.$Proxy89.selectOne(Unknown Source)</span><br><span class="line">	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)</span><br><span class="line">	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:89)</span><br><span class="line">	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:61)</span><br><span class="line">	at com.sun.proxy.$Proxy92.selectByPrimaryKey(Unknown Source)</span><br><span class="line">	at com.thok.myoa.service.impl.UserServiceImpl.getUser(UserServiceImpl.java:56)</span><br><span class="line">	at com.thok.myoa.controller.UserController.getUser(UserController.java:37)</span><br><span class="line">	at com.thok.myoa.controller.UserController$$FastClassBySpringCGLIB$$9df6857a.invoke(&lt;generated&gt;)</span><br><span class="line">	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)</span><br><span class="line">	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:747)</span><br><span class="line">	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)</span><br><span class="line">	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)</span><br><span class="line">	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)</span><br><span class="line">	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)</span><br><span class="line">	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)</span><br><span class="line">	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)</span><br><span class="line">	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)</span><br><span class="line">	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)</span><br><span class="line">	at com.thok.myoa.controller.UserController$$EnhancerBySpringCGLIB$$9077b8c4.getUser(&lt;generated&gt;)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)</span><br><span class="line">	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)</span><br><span class="line">	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)</span><br><span class="line">	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)</span><br><span class="line">	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)</span><br><span class="line">	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)</span><br><span class="line">	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)</span><br><span class="line">	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)</span><br><span class="line">	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)</span><br><span class="line">	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at com.thok.myoa.config.RequestBodyReadFilter.doFilter(RequestBodyReadFilter.java:19)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)</span><br><span class="line">	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)</span><br><span class="line">	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)</span><br><span class="line">	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)</span><br><span class="line">	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)</span><br><span class="line">	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)</span><br><span class="line">	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)</span><br><span class="line">	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)</span><br><span class="line">	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)</span><br><span class="line">	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)</span><br><span class="line">	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)</span><br><span class="line">	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)</span><br><span class="line">	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)</span><br><span class="line">	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)</span><br><span class="line">	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)</span><br><span class="line">	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)</span><br><span class="line">	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)</span><br><span class="line">	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</span><br><span class="line">	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</span><br><span class="line">	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)</span><br><span class="line">	at java.lang.Thread.run(Thread.java:748)</span><br><span class="line">Caused by: org.apache.ibatis.exceptions.PersistenceException: </span><br><span class="line">### Error querying database.  Cause: java.lang.NullPointerException</span><br><span class="line">### Cause: java.lang.NullPointerException</span><br><span class="line">	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)</span><br><span class="line">	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)</span><br><span class="line">	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)</span><br><span class="line">	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)</span><br><span class="line">	... 80 more</span><br><span class="line">Caused by: java.lang.NullPointerException</span><br><span class="line">	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:147)</span><br><span class="line">	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)</span><br><span class="line">	at com.sun.proxy.$Proxy146.query(Unknown Source)</span><br><span class="line">	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)</span><br><span class="line">	... 87 more</span><br></pre></td></tr></table></figure>
 
 <h4 id="遇到这个究极报错之后"><a href="#遇到这个究极报错之后" class="headerlink" title="遇到这个究极报错之后"></a>遇到这个究极报错之后</h4><p>我决定慢慢debug，报错信息也不清楚，到底是sql语句不行还是，mybatis-plus做的mapper代理出错了。Error querying database.</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug1.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug1.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>再从这个方法进去</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug2.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug2.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>这个方法是mybatis-plus的判断，误导我了，让我以为是mybatis-plus把操作转换成它自己的getOne api了，我还想mp这么变态。</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug3.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/myvolantis/assets/images/2019-12/05-debug4.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/myvolantis/assets/images/2019-12/05-debug5.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug3.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/assets/images/2019-12/05-debug4.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/assets/images/2019-12/05-debug5.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>再走下去，就进入了mybatis拦截器</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug6.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/myvolantis/assets/images/2019-12/05-debug7.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug6.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/assets/images/2019-12/05-debug7.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>再走下去就走到了，没错，pagehelper拦截器！</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug8.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug8.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>就是这个dialect是null，所以报了空指针异常。dialect我之前做hibernate集成sqlite的时候遇到了，是方言的意思。我猜就是pageHelper不知道自己现在在什么环境的数据中的原因。</p>
-<p><img src="/myvolantis/assets/images/2019-12/05-debug9.jpg" class="lazyload" data-srcset="/myvolantis/assets/images/2019-12/05-debug9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/assets/images/2019-12/05-debug9.jpg" class="lazyload" data-srcset="/assets/images/2019-12/05-debug9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>说起来，其实好简单，pageHelper配置的时候把参数填好就行</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * pagehelper 拦截器</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> ConfigurationCustomizer <span class="title function_">mybatisConfigurationCustomizer</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ConfigurationCustomizer</span>() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">customize</span><span class="params">(MybatisConfiguration configuration)</span> &#123;</span><br><span class="line">            <span class="type">PageInterceptor</span> <span class="variable">pageInterceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PageInterceptor</span>();</span><br><span class="line">            <span class="type">Properties</span> <span class="variable">properties</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            pagehelper.helper-dialect=mysql</span></span><br><span class="line"><span class="comment">            pagehelper.params=count=countSql</span></span><br><span class="line"><span class="comment">            pagehelper.reasonable=true</span></span><br><span class="line"><span class="comment">            pagehelper.support-methods-arguments=true</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            properties.setProperty(<span class="string">&quot;helper-dialect&quot;</span>, <span class="string">&quot;mysql&quot;</span>);</span><br><span class="line">            properties.setProperty(<span class="string">&quot;params=count&quot;</span>, <span class="string">&quot;countSql&quot;</span>);</span><br><span class="line">            properties.setProperty(<span class="string">&quot;reasonable&quot;</span>, <span class="string">&quot;true&quot;</span>);</span><br><span class="line">            properties.setProperty(<span class="string">&quot;support-methods-arguments&quot;</span>, <span class="string">&quot;true&quot;</span>);</span><br><span class="line">            pageInterceptor.setProperties(properties);</span><br><span class="line">            configuration.addInterceptor(pageInterceptor);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -2626,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/mybatis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/mybatis-plus/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis-plus</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/myvolantis/tags/pagehelper/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>pagehelper</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mybatis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mybatis-plus/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatis-plus</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pagehelper/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>pagehelper</p></a></div>
   <span hidden itemprop="keywords">mybatis mybatis-plus pagehelper</span>
 
 
@@ -2640,7 +2640,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
 1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;--&gt;&lt;!--            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;--&gt;&lt;!--            &lt;version&gt;1.2.5&lt;/version&gt;--&gt;&lt;!--        &lt;/dependency&gt;--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;    &lt;version&gt;5.1.4&lt;/version&gt;&lt;/dependency&gt;&lt;!-- pagehelper 依赖 --&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;    &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;"
           
           >
@@ -2653,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
 1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;--&gt;&lt;!--            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;--&gt;&lt;!--            &lt;version&gt;1.2.5&lt;/version&gt;--&gt;&lt;!--        &lt;/dependency&gt;--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;    &lt;version&gt;5.1.4&lt;/version&gt;&lt;/dependency&gt;&lt;!-- pagehelper 依赖 --&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;    &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;"
           
           >
@@ -2666,7 +2666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/&title=oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理 - Anarckk's Blog&summary=一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包
 1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;--&gt;&lt;!--            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;--&gt;&lt;!--            &lt;version&gt;1.2.5&lt;/version&gt;--&gt;&lt;!--        &lt;/dependency&gt;--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;    &lt;version&gt;5.1.4&lt;/version&gt;&lt;/dependency&gt;&lt;!-- pagehelper 依赖 --&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;    &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;"
           
           >
@@ -2700,13 +2700,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/myvolantis/2019/12/05/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/window%E8%87%AA%E5%B8%A6%E8%AE%B0%E4%BA%8B%E6%9C%AC%E7%9A%84%E5%82%BB%E9%80%BC%E8%A1%8C%E4%B8%BA/'>
+        <a class='prev' href='/2019/12/05/%E5%BA%95%E5%B1%82%E7%A1%AC%E6%A0%B8/window%E8%87%AA%E5%B8%A6%E8%AE%B0%E4%BA%8B%E6%9C%AC%E7%9A%84%E5%82%BB%E9%80%BC%E8%A1%8C%E4%B8%BA/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>window自带记事本的傻逼行为</p>
           <p class='content'>在windows平台下，使用系统的记事本以UTF-8编码格式存储了一个文本文件，但是由于Microsoft开发记事本的团队使用了一个非常怪异的行为来保存UTF-8编码的文件，它们自作聪明地在每个...</p>
         </a>
       
       
-        <a class='next' href='/myvolantis/2019/12/05/2019-12/05-%E5%85%B3%E4%BA%8E-ConfigurationProperties%E6%B3%A8%E8%A7%A3%E7%9A%84%E7%90%86%E8%A7%A3/'>
+        <a class='next' href='/2019/12/05/2019-12/05-%E5%85%B3%E4%BA%8E-ConfigurationProperties%E6%B3%A8%E8%A7%A3%E7%9A%84%E7%90%86%E8%A7%A3/'>
           <p class='title'>关于@ConfigurationProperties注解的理解<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>定义一个config类
 123456789101112@Component@ConfigurationProperties(prefix = &quot;app-config&quot;)@Da...</p>
@@ -2725,7 +2725,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2751,8 +2751,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/myvolantis/about/'>
-          <img no-lazy src='/myvolantis/assets/volantis/头像2.jpg'/>
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/assets/volantis/头像2.jpg'/>
         </a>
       
     
@@ -2770,7 +2770,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/myvolantis/atom.xml"
+            <a href="/atom.xml"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2797,7 +2797,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <a href="/myvolantis/"
+            <a href="/"
               class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2999,7 +2999,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/myvolantis/myvolantis/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -3015,19 +3015,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/sites.js")
+        volantis.js("/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/friends.js")
+        volantis.js("/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/myvolantis/js/plugins/tags/contributors.js")
+        volantis.js("/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3147,14 +3147,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/myvolantis/" || "/").endsWith("/") ?
-    "/myvolantis/" || "/" :
-    "/myvolantis//" || "/";
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/myvolantis/js/search/hexo.js");
+    return volantis.js("/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3403,7 +3403,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/categories/上层技术/","name":"上层技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/myvolantis/myvolantis/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的Error-querying-database-报错处理/","name":"oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/myvolantis/myvolantis/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io/myvolantis?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理","description":"一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包\n1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;--&gt;&lt;!--            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;--&gt;&lt;!--            &lt;version&gt;1.2.5&lt;/version&gt;--&gt;&lt;!--        &lt;/dependency&gt;--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;    &lt;version&gt;5.1.4&lt;/version&gt;&lt;/dependency&gt;&lt;!-- pagehelper 依赖 --&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;    &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/myvolantis/myvolantis/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/myvolantis/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/","wordCount":820,"datePublished":"2019-12-05T08:35:51.000Z","dateModified":"2023-06-19T08:37:14.691Z","articleSection":"上层技术","keywords":"mybatis,mybatis-plus,pagehelper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Anarckk's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://anarckk.github.io/","name":"Anarckk's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://anarckk.github.io/categories/上层技术/","name":"上层技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://anarckk.github.io/2019/12/05/2019-12/05-oa项目集成mybatis-plus中遇到的Error-querying-database-报错处理/","name":"oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Anarckk's Blog","url":"https://anarckk.github.io/","keywords":null,"description":"Anarckk's Blog","author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/","description":"Anarckk's Blog"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","url":"https://anarckk.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://anarckk.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"oa项目集成mybatis-plus中遇到的Error querying database.和NullPointerException报错处理","description":"一切得先从我的操作说起。在集成mybatis-plus过程中，我将 pagehelper-spring-boot-starter 拆成两个依赖包\n1234567891011121314151617&lt;!-- 分页插件 --&gt;&lt;!--        &lt;dependency&gt;--&gt;&lt;!--            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;--&gt;&lt;!--            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;--&gt;&lt;!--            &lt;version&gt;1.2.5&lt;/version&gt;--&gt;&lt;!--        &lt;/dependency&gt;--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;    &lt;version&gt;5.1.4&lt;/version&gt;&lt;/dependency&gt;&lt;!-- pagehelper 依赖 --&gt;&lt;dependency&gt;    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;    &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/"},"author":{"@type":"Person","name":"Anarckk","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://anarckk.github.io/"},"publisher":{"@type":"Organization","name":"Anarckk's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://anarckk.github.io/2019/12/05/2019-12/05-oa%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90mybatis-plus%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84Error-querying-database-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/","wordCount":820,"datePublished":"2019-12-05T08:35:51.000Z","dateModified":"2023-06-19T08:37:14.000Z","articleSection":"上层技术","keywords":"mybatis,mybatis-plus,pagehelper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
